@@ -279,7 +279,7 @@
                 <a href="/profil" class="nav-link">Profil</a>
                 <a href="/katalog" class="nav-link">Katalog</a>
                 <a href="/bantuan" class="nav-link active">Bantuan</a>
-                <a href="/kontak" class="nav-link">Kontak</a>
+                <a href="/" class="nav-link">Kontak</a>
             </nav>
             <div style="display:flex;align-items:center;gap:10px;">
                 <div class="avatar-sm">MH</div>
@@ -385,7 +385,7 @@
                     <p style="font-size:14px;font-weight:700;color:var(--text);">Masih ada pertanyaan?</p>
                     <p style="font-size:12px;color:var(--muted);margin-top:3px;">Senin – Jumat, 08.00 – 16.00 WIB</p>
                 </div>
-                <a href="/kontak" class="btn-hubungi">Hubungi Kami →</a>
+                <a href="/" class="btn-hubungi">Hubungi Kami →</a>
             </div>
         </div>
     </div>
