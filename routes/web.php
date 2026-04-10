@@ -2,11 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return '<h1>Ini adalah Halaman Tentang Aplikasi Event Hub</h1>';
-});
 
-Route::get('/kontak', function () {
+Route::get('/', function () {
     return view('contact');
 });
 
