@@ -7,4 +7,4 @@ TUGAS 2
 * Halaman Transaksi : [https://amikomeventhub-3320-main-se5rrk.free.laravel.cloud/#transactions/)
 * Halaman Beranda : [https://amikomeventhub-3320-main-se5rrk.free.laravel.cloud/)
 * Halaman Detail Event : [https://amikomeventhub-3320-main-se5rrk.free.laravel.cloud/event-detail.html/)
-* Halaman Checkout : [https://amikomeventhub-3320-main-se5rrk.free.laravel.cloud/checkout.html/)
+* Halaman Checkout : [[https://amikomeventhub-3320-main-se5rrk.free.laravel.cloud/checkout.html/)](https://amikomeventhub-3320-main-se5rrk.free.laravel.cloud/checkout.html)
