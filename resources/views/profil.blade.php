@@ -74,11 +74,6 @@
         </div>
     </div>
 
-    <footer class="bg-slate-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <p class="text-slate-500 font-bold text-[10px] uppercase tracking-[0.4em]">AmikomEventHub Dashboard System</p>
-        </div>
-    </footer>
 
 </body>
 

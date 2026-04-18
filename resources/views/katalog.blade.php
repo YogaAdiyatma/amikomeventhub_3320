@@ -75,37 +75,6 @@
         </div>
     </div>
 
-    <footer class="bg-slate-900 text-white pt-20 pb-10">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
-            <div class="col-span-1 md:col-span-2 space-y-6">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold">AH</div>
-                    <span class="text-xl font-black">AmikomEventHub</span>
-                </div>
-                <p class="text-slate-400 max-w-xs font-medium">Informasi resmi mengenai seluruh agenda kegiatan Universitas Amikom Yogyakarta.</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-6 text-indigo-400 uppercase tracking-widest text-xs">Navigasi</h4>
-                <ul class="space-y-4 text-slate-300 font-medium text-sm">
-                    <li><a href="/" class="hover:text-white transition">Beranda</a></li>
-                    <li><a href="/katalog" class="hover:text-white transition">Katalog Event</a></li>
-                    <li><a href="/bantuan" class="hover:text-white transition">Pusat Bantuan</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold mb-6 text-indigo-400 uppercase tracking-widest text-xs">Support</h4>
-                <ul class="space-y-4 text-slate-300 font-medium text-sm">
-                    <li><a href="/kontak" class="hover:text-white transition">Kontak Kami</a></li>
-                    <li>Syarat & Ketentuan</li>
-                    <li>Kebijakan Privasi</li>
-                </ul>
-            </div>
-        </div>
-        <div class="text-center text-slate-500 text-[10px] font-bold uppercase tracking-[0.2em] border-t border-slate-800 pt-10 px-6">
-            Copyright 2024 AmikomEventHub - Amikom Yogyakarta
-        </div>
-    </footer>
-
 </body>
 
 </html>

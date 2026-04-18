@@ -64,40 +64,6 @@
         </div>
     </div>
 
-    <footer class="bg-slate-900 text-white pt-20 pb-10">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
-            <div class="col-span-1 md:col-span-2 space-y-6">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold">AH</div>
-                    <span class="text-xl font-black">AmikomEventHub</span>
-                </div>
-                <p class="text-slate-400 max-w-xs font-medium italic">Solusi praktis manajemen event kampus Amikom.</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-6 text-indigo-400 uppercase tracking-widest text-xs">Layanan</h4>
-                <ul class="space-y-4 text-slate-300 font-medium text-sm">
-                    <li><a href="/katalog" class="hover:text-white transition">Semua Event</a></li>
-                    <li><a href="/bantuan" class="hover:text-white transition">FAQ</a></li>
-                    <li><a href="/kontak" class="hover:text-white transition">Hubungi Support</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold mb-6 text-indigo-400 uppercase tracking-widest text-xs">Lokasi</h4>
-                <ul class="space-y-4 text-slate-300 font-medium text-sm leading-relaxed">
-                    <li>Jl. Ring Road Utara, Condongcatur</li>
-                    <li>Sleman, Yogyakarta</li>
-                </ul>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto px-6 pt-10 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500 text-xs font-bold uppercase tracking-widest">
-            <p>Copyright 2024 AmikomEventHub</p>
-            <div class="flex gap-8">
-                <a href="#" class="hover:text-white">Instagram</a>
-                <a href="#" class="hover:text-white">Twitter</a>
-            </div>
-        </div>
-    </footer>
-
 </body>
 
 </html>
