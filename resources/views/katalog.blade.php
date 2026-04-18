@@ -4,91 +4,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katalog Event - AmikomEventHub</title>
+    <title>Katalog - AmikomEventHub</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        }
     </style>
 </head>
 
-<body class="bg-slate-50 min-h-screen">
+<body class="bg-slate-50 text-slate-900">
 
-    <!-- Navbar -->
-    <nav class="bg-white shadow-sm border-b px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-2">
-            <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold">AH</div>
-            <span class="text-xl font-bold">AmikomEventHub</span>
-        </div>
-        <div class="flex gap-6 font-medium text-slate-600">
-            <a href="{{ route('home') }}" class="hover:text-indigo-600 transition">Home</a>
-            <a href="{{ route('katalog') }}" class="text-indigo-600 font-bold">Katalog</a>
-            <a href="{{ route('profil') }}" class="hover:text-indigo-600 transition">Profil</a>
-            <a href="{{ route('bantuan') }}" class="hover:text-indigo-600 transition">Bantuan</a>
-            <a href="{{ route('kontak') }}" class="hover:text-indigo-600 transition">Kontak</a>
+    <nav class="sticky top-0 z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold text-xl">AH</div>
+                <span class="text-xl font-black tracking-tighter">AmikomEventHub</span>
+            </a>
+            <div class="hidden md:flex items-center gap-10">
+                <a href="/" class="text-slate-500 hover:text-indigo-600 font-bold text-sm uppercase tracking-widest transition">Beranda</a>
+                <a href="/katalog" class="text-indigo-600 font-bold text-sm uppercase tracking-widest">Katalog</a>
+                <a href="/bantuan" class="text-slate-500 hover:text-indigo-600 font-bold text-sm uppercase tracking-widest transition">Bantuan</a>
+                <a href="/kontak" class="text-slate-500 hover:text-indigo-600 font-bold text-sm uppercase tracking-widest transition">Kontak</a>
+            </div>
+            <a href="/profil" class="px-6 py-2.5 bg-slate-900 text-white rounded-xl font-bold text-sm shadow-md">Profil Saya</a>
         </div>
     </nav>
 
-    <!-- Content -->
-    <main class="max-w-7xl mx-auto px-6 py-12">
-        <div class="mb-10">
-            <h1 class="text-4xl font-black text-slate-800">Katalog Event 🎉</h1>
-            <p class="text-slate-500 mt-2">Temukan berbagai event seru di Amikom Event Hub</p>
+    <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
+            <div>
+                <span class="text-indigo-600 font-bold uppercase tracking-widest text-xs">Eksplorasi</span>
+                <h1 class="text-5xl font-black mt-2">Daftar Event</h1>
+                <p class="text-slate-500 mt-4 max-w-md font-medium">Pilih kategori event yang sesuai dengan minat akademik dan hobi Anda.</p>
+            </div>
+            <div class="flex bg-white p-2 rounded-2xl shadow-sm border w-full md:w-auto">
+                <input type="text" placeholder="Cari nama event..." class="bg-transparent px-6 py-3 outline-none w-full md:w-80 font-medium">
+                <button class="bg-indigo-600 text-white px-8 rounded-xl font-bold">Cari</button>
+            </div>
         </div>
 
-        <!-- Filter -->
-        <div class="flex gap-3 mb-8 flex-wrap">
-            <button class="px-5 py-2 bg-indigo-600 text-white rounded-xl font-bold text-sm">Semua</button>
-            <button class="px-5 py-2 border border-slate-200 text-slate-600 rounded-xl font-bold text-sm hover:border-indigo-400 hover:text-indigo-600 transition">🎵 Musik</button>
-            <button class="px-5 py-2 border border-slate-200 text-slate-600 rounded-xl font-bold text-sm hover:border-indigo-400 hover:text-indigo-600 transition">💻 Teknologi</button>
-            <button class="px-5 py-2 border border-slate-200 text-slate-600 rounded-xl font-bold text-sm hover:border-indigo-400 hover:text-indigo-600 transition">🎓 Workshop</button>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="group bg-white rounded-[2.5rem] border border-slate-100 overflow-hidden hover:shadow-2xl hover:shadow-indigo-100/50 transition-all duration-500">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute top-6 left-6">
+                        <span class="px-4 py-2 bg-white/90 backdrop-blur-md rounded-full text-[10px] font-black uppercase tracking-widest text-indigo-600 shadow-sm">Workshop</span>
+                    </div>
+                </div>
+                <div class="p-10">
+                    <h3 class="text-2xl font-black mb-4 group-hover:text-indigo-600 transition">UI/UX Design Masterclass</h3>
+                    <div class="flex items-center gap-3 text-slate-400 font-bold text-xs uppercase tracking-widest mb-8">
+                        <span>Cinema Amikom</span>
+                        <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                        <span>20 Okt 2024</span>
+                    </div>
+                    <div class="flex justify-between items-center pt-8 border-t">
+                        <span class="text-indigo-600 font-black text-2xl">Rp 75.000</span>
+                        <a href="#" class="px-6 py-3 bg-slate-900 text-white rounded-xl font-bold text-xs hover:bg-indigo-600 transition">Detail</a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <!-- Event Grid (Placeholder) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Card 1 -->
-            <div class="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 group">
-                <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-6xl">🎷</div>
-                <div class="p-6">
-                    <span class="text-xs font-bold text-indigo-600 uppercase bg-indigo-50 px-3 py-1 rounded-full">Musik</span>
-                    <h3 class="text-lg font-black mt-3 mb-1 group-hover:text-indigo-600 transition">Jazz Night 2024</h3>
-                    <p class="text-slate-500 text-sm">16 November 2024 • Blue Note Lounge</p>
-                    <div class="mt-4 flex justify-between items-center pt-4 border-t">
-                        <span class="text-indigo-600 font-black text-xl">Rp 150.000</span>
-                        <a href="{{ route('events.show', 1) }}" class="px-4 py-2 bg-indigo-50 text-indigo-600 rounded-xl font-bold text-sm hover:bg-indigo-600 hover:text-white transition">Detail →</a>
-                    </div>
+    <footer class="bg-slate-900 text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+            <div class="col-span-1 md:col-span-2 space-y-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold">AH</div>
+                    <span class="text-xl font-black">AmikomEventHub</span>
                 </div>
+                <p class="text-slate-400 max-w-xs font-medium">Informasi resmi mengenai seluruh agenda kegiatan Universitas Amikom Yogyakarta.</p>
             </div>
-            <!-- Card 2 -->
-            <div class="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 group">
-                <div class="h-48 bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-6xl">🤖</div>
-                <div class="p-6">
-                    <span class="text-xs font-bold text-cyan-600 uppercase bg-cyan-50 px-3 py-1 rounded-full">Teknologi</span>
-                    <h3 class="text-lg font-black mt-3 mb-1 group-hover:text-cyan-600 transition">AI & Future Workshop</h3>
-                    <p class="text-slate-500 text-sm">26 Oktober 2024 • Aula Utama</p>
-                    <div class="mt-4 flex justify-between items-center pt-4 border-t">
-                        <span class="text-indigo-600 font-black text-xl">Rp 50.000</span>
-                        <a href="{{ route('events.show', 2) }}" class="px-4 py-2 bg-indigo-50 text-indigo-600 rounded-xl font-bold text-sm hover:bg-indigo-600 hover:text-white transition">Detail →</a>
-                    </div>
-                </div>
+            <div>
+                <h4 class="font-bold mb-6 text-indigo-400 uppercase tracking-widest text-xs">Navigasi</h4>
+                <ul class="space-y-4 text-slate-300 font-medium text-sm">
+                    <li><a href="/" class="hover:text-white transition">Beranda</a></li>
+                    <li><a href="/katalog" class="hover:text-white transition">Katalog Event</a></li>
+                    <li><a href="/bantuan" class="hover:text-white transition">Pusat Bantuan</a></li>
+                </ul>
             </div>
-            <!-- Card 3 -->
-            <div class="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 group">
-                <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center text-6xl">💻</div>
-                <div class="p-6">
-                    <span class="text-xs font-bold text-green-600 uppercase bg-green-50 px-3 py-1 rounded-full">Coding</span>
-                    <h3 class="text-lg font-black mt-3 mb-1 group-hover:text-green-600 transition">Hackathon 2024</h3>
-                    <p class="text-slate-500 text-sm">18-20 Oktober 2024 • Lab Komputer</p>
-                    <div class="mt-4 flex justify-between items-center pt-4 border-t">
-                        <span class="text-green-600 font-black text-xl">GRATIS</span>
-                        <a href="{{ route('events.show', 3) }}" class="px-4 py-2 bg-indigo-50 text-indigo-600 rounded-xl font-bold text-sm hover:bg-indigo-600 hover:text-white transition">Detail →</a>
-                    </div>
-                </div>
+            <div>
+                <h4 class="font-bold mb-6 text-indigo-400 uppercase tracking-widest text-xs">Support</h4>
+                <ul class="space-y-4 text-slate-300 font-medium text-sm">
+                    <li><a href="/kontak" class="hover:text-white transition">Kontak Kami</a></li>
+                    <li>Syarat & Ketentuan</li>
+                    <li>Kebijakan Privasi</li>
+                </ul>
             </div>
         </div>
-    </main>
+        <div class="text-center text-slate-500 text-[10px] font-bold uppercase tracking-[0.2em] border-t border-slate-800 pt-10 px-6">
+            Copyright 2024 AmikomEventHub - Amikom Yogyakarta
+        </div>
+    </footer>
 
 </body>
 

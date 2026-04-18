@@ -3,35 +3,33 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EventController;
-use App\Http\Controllers\TicketController;
 use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\AdminEventController;
-use App\Http\Controllers\Admin\AdminTransactionController;
-use App\Http\Controllers\Admin\AdminCategoryController;
+use App\Http\Controllers\Admin\EventController as AdminEventController;
+use App\Http\Controllers\Admin\TransactionController;
+use App\Http\Controllers\Admin\CategoryController;
 
+// =============================================
+// USER AREA
+// =============================================
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/profil', [HomeController::class, 'profil'])->name('profil');
+Route::get('/katalog', [HomeController::class, 'katalog'])->name('katalog');
+Route::get('/bantuan', [HomeController::class, 'bantuan'])->name('bantuan');
+Route::get('/kontak', [HomeController::class, 'kontak'])->name('kontak');
 
-// Halaman Detail Event (menggunakan ID event)
+// =============================================
+// EVENT FLOW
+// =============================================
 Route::get('/event/{id}', [EventController::class, 'show'])->name('events.show');
-
-// Halaman Checkout
 Route::get('/checkout', [EventController::class, 'checkout'])->name('checkout');
+Route::get('/my-ticket', [EventController::class, 'ticket'])->name('ticket');
 
-// Halaman Tiket
-Route::get('/my-ticket', [TicketController::class, 'index'])->name('ticket');
-
-
+// =============================================
+// ADMIN AREA
+// =============================================
 Route::prefix('admin')->name('admin.')->group(function () {
-
-    // Dashboard Admin
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-
-    // Manajemen Events
     Route::get('/events', [AdminEventController::class, 'index'])->name('events.index');
-
-    // Manajemen Transactions
-    Route::get('/transactions', [AdminTransactionController::class, 'index'])->name('transactions.index');
-
-    // Manajemen Categories (Tugas Pertemuan 3)
-    Route::get('/categories', [AdminCategoryController::class, 'index'])->name('categories.index');
+    Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions.index');
+    Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
 });

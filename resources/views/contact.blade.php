@@ -6,66 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontak - AmikomEventHub</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        }
     </style>
 </head>
 
-<body class="bg-slate-100 min-h-screen">
+<body class="bg-slate-50 text-slate-900">
 
-    <!-- Navbar -->
-    <nav class="bg-white shadow-sm border-b px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-2">
-            <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold">AH</div>
-            <span class="text-xl font-bold">AmikomEventHub</span>
-        </div>
-        <div class="flex gap-6 font-medium text-slate-600">
-            <a href="{{ route('home') }}" class="hover:text-indigo-600 transition">Home</a>
-            <a href="{{ route('katalog') }}" class="hover:text-indigo-600 transition">Katalog</a>
-            <a href="{{ route('profil') }}" class="hover:text-indigo-600 transition">Profil</a>
-            <a href="{{ route('bantuan') }}" class="hover:text-indigo-600 transition">Bantuan</a>
-            <a href="{{ route('kontak') }}" class="text-indigo-600 font-bold">Kontak</a>
+    <nav class="sticky top-0 z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold">AH</div>
+                <span class="text-xl font-black tracking-tighter">AmikomEventHub</span>
+            </a>
+            <div class="hidden md:flex items-center gap-10">
+                <a href="/" class="text-slate-500 hover:text-indigo-600 font-bold text-sm uppercase tracking-widest transition">Beranda</a>
+                <a href="/katalog" class="text-slate-500 hover:text-indigo-600 font-bold text-sm uppercase tracking-widest transition">Katalog</a>
+                <a href="/bantuan" class="text-slate-500 hover:text-indigo-600 font-bold text-sm uppercase tracking-widest transition">Bantuan</a>
+                <a href="/kontak" class="text-indigo-600 font-bold text-sm uppercase tracking-widest">Kontak</a>
+            </div>
+            <a href="/profil" class="px-6 py-2.5 bg-slate-900 text-white rounded-xl font-bold text-sm shadow-md">Profil Saya</a>
         </div>
     </nav>
 
-    <main class="flex items-center justify-center min-h-[calc(100vh-72px)] px-6">
-        <div class="bg-white p-10 rounded-3xl shadow-xl border border-slate-200 text-center max-w-md w-full">
-            <div class="text-5xl mb-4">📬</div>
-            <h1 class="text-2xl font-black text-slate-800 mb-2">Hubungi Kami</h1>
-            <p class="text-slate-500 mb-8">Tim AmikomEventHub siap membantu Anda</p>
+    <div class="max-w-7xl mx-auto px-6 py-24 min-h-screen">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+            <div>
+                <span class="text-indigo-600 font-black uppercase tracking-[0.3em] text-[10px]">Terhubung</span>
+                <h1 class="text-6xl font-black mt-8 leading-tight">Butuh <span class="text-indigo-600">Bantuan</span> Cepat?</h1>
+                <p class="text-slate-500 mt-8 text-xl font-medium leading-relaxed">Tim dukungan kami siap melayani pertanyaan Anda seputar teknis platform atau kerjasama event.</p>
 
-            <div class="space-y-4 text-left mb-8">
-                <div class="flex items-center gap-4 p-4 bg-indigo-50 rounded-2xl">
-                    <span class="text-2xl">📧</span>
-                    <div>
-                        <p class="text-xs text-slate-400 font-bold uppercase">Email</p>
-                        <p class="font-bold text-indigo-600">admin@amikomeventhub.com</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-4 p-4 bg-green-50 rounded-2xl">
-                    <span class="text-2xl">📱</span>
-                    <div>
-                        <p class="text-xs text-slate-400 font-bold uppercase">WhatsApp</p>
-                        <p class="font-bold text-green-600">+62 812 3456 7890</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-4 p-4 bg-purple-50 rounded-2xl">
-                    <span class="text-2xl">📍</span>
-                    <div>
-                        <p class="text-xs text-slate-400 font-bold uppercase">Alamat</p>
-                        <p class="font-bold text-purple-600">Jl. Ring Road Utara, Yogyakarta</p>
+                <div class="mt-16 space-y-10">
+                    <div class="flex items-center gap-8 group">
+                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center border shadow-sm text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition duration-500">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-xs font-black text-slate-400 uppercase tracking-widest">Alamat Email</p>
+                            <p class="text-xl font-bold mt-1">support@amikomevent.id</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <a href="{{ route('home') }}" class="inline-block bg-indigo-600 text-white font-bold py-3 px-8 rounded-2xl hover:bg-indigo-700 hover:shadow-lg transition duration-300">
-                ← Kembali ke Home
-            </a>
+            <div class="bg-white p-12 rounded-[3rem] border border-slate-100 shadow-2xl shadow-indigo-100/50">
+                <form action="#" class="space-y-8">
+                    <div class="space-y-3">
+                        <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Pesan Anda</label>
+                        <textarea rows="6" placeholder="Apa yang bisa kami bantu hari ini?" class="w-full px-8 py-6 bg-slate-50 rounded-3xl outline-none focus:ring-2 focus:ring-indigo-600 transition border-transparent border font-medium"></textarea>
+                    </div>
+                    <button class="w-full py-6 bg-indigo-600 text-white rounded-[2.5rem] font-bold text-lg shadow-xl shadow-indigo-200 transition hover:scale-[1.02]">Kirim Pesan Sekarang</button>
+                </form>
+            </div>
         </div>
-    </main>
+    </div>
+
+    <footer class="bg-slate-900 text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6 pt-10 border-t border-slate-800 text-center text-slate-500 text-xs font-bold uppercase tracking-[0.3em]">
+            Copyright 2024 AmikomEventHub. Universitas Amikom Yogyakarta.
+        </div>
+    </footer>
 
 </body>
 

@@ -9,10 +9,9 @@ class DashboardController extends Controller
 {
     /**
      * Menampilkan halaman dashboard admin
-     * Sesuai Instruksi Modul Pertemuan 3 - 3.4.5
      */
     public function index()
     {
         return view('admin.dashboard');
-    }   
+    }
 }
