@@ -10,6 +10,12 @@ Identitas Mahasiswa:
 ---
 # Hasil Pengerjaan (Live Demo)
 
+TUGAS 1
+* Halaman Profil : (https://amikomeventhub-3320-main-se5rrk.free.laravel.cloud/profil/)
+* Halaman Katalog : (https://amikomeventhub-3320-main-se5rrk.free.laravel.cloud/katalog/) 
+* Halaman Bantuan : (https://amikomeventhub-3320-main-se5rrk.free.laravel.cloud/bantuan/)
+* Halaman Kontak : (https://amikomeventhub-3320-main-se5rrk.free.laravel.cloud/kontak/)
+
 TUGAS 2
 * Halaman Dashboard : [https://amikomeventhub-3320-main-se5rrk.free.laravel.cloud/](https://amikomeventhub-3320-main-se5rrk.free.laravel.cloud/admin/)
 * Halaman Event : [https://amikomeventhub-3320-main-se5rrk.free.laravel.cloud/#events/)
