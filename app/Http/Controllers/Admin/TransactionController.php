@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class TransactionController extends Controller
 {
     /**
-     * Menampilkan halaman laporan transaksi
+     * Menampilkan halaman laporan transaksi (Admin)
      */
     public function index()
     {
