@@ -10,8 +10,8 @@ class EventController extends Controller
     /**
      * Menampilkan halaman kelola event (admin)
      */
-    public function index()
+    public function create()
     {
-        return view('admin.events');
+        return view('admin.events.create'); // Pastikan file view ini sudah ada di resources/views/admin/events/create.blade.php
     }
 }
