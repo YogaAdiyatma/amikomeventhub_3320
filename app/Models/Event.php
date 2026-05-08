@@ -1,14 +1,15 @@
 <?php
 
+
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 use Illuminate\Database\Eloquent\Model;
+
 
 class Event extends Model
 {
-    use HasFactory;
-
+    //
     protected $fillable = [
         'category_id',
         'title',
@@ -20,7 +21,7 @@ class Event extends Model
         'poster_path'
     ];
 
-    // Relasi balik ke Category
+
     public function category()
     {
         return $this->belongsTo(Category::class);
