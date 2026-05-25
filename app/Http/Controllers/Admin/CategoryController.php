@@ -7,19 +7,27 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-class   Controller extends Controller
+// ✅ PERBAIKAN: Nama kelas diubah dari "Controller" menjadi "CategoryController"
+// ❌ SEBELUMNYA: class   Controller extends Controller
+// ✅ SESUDAHNYA: class CategoryController extends Controller
+class CategoryController extends Controller
 {
+    // READ + SEARCH (Soal 1 & Soal 3)
     public function index(Request $request)
     {
-    $search = $request->query('search');
+        // 1. Ambil input dari kolom search html (Soal 3)
+        $search = $request->query('search');
 
-    if ($search) {
-        $categories = Category::where('name', 'LIKE', "%{$search}%")->get();
-    } else {
-        $categories = Category::all();
-    }
+        // 2. Jika ada input pencarian, saring data dengan klausa LIKE (Soal 3)
+        if ($search) {
+            $categories = Category::where('name', 'LIKE', "%{$search}%")->get();
+        } else {
+            // Jika tidak ada pencarian, tampilkan semua data kategori seperti biasa
+            $categories = Category::all();
+        }
 
-    return view('admin.categories.index', compact('categories'));
+        // 3. Kirim data ke view index kategori
+        return view('admin.categories.index', compact('categories'));
     }
 
     // CREATE

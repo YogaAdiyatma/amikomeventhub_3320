@@ -25,6 +25,6 @@ TUGAS 2
 * Halaman Detail Event : https://amikomeventhub-3320-main-se5rrk.free.laravel.cloud/event-detail.html
 * Halaman Checkout     : https://amikomeventhub-3320-main-se5rrk.free.laravel.cloud/checkout.html
 
-CRUD Tabel event
+CRUD Tabel Event
 * Halaman Admin Dashboard  : https://amikomeventhub-3320-main-se5rrk.free.laravel.cloud/admin
 * Halaman Admin Event      : https://amikomeventhub-3320-main-se5rrk.free.laravel.cloud/admin/events 
