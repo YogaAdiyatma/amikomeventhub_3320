@@ -7,18 +7,19 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-class CategoryController extends Controller
+class   Controller extends Controller
 {
-    // READ + SEARCH (Soal 1 & Soal 3)
     public function index(Request $request)
     {
-        $search = $request->input('search');
+    $search = $request->query('search');
 
-        $categories = Category::when($search, function ($query, $search) {
-            $query->where('name', 'LIKE', '%' . $search . '%');
-        })->latest()->get();
+    if ($search) {
+        $categories = Category::where('name', 'LIKE', "%{$search}%")->get();
+    } else {
+        $categories = Category::all();
+    }
 
-        return view('admin.categories.index', compact('categories', 'search'));
+    return view('admin.categories.index', compact('categories'));
     }
 
     // CREATE
