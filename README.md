@@ -28,3 +28,6 @@ TUGAS 2
 CRUD Tabel Event
 * Halaman Admin Dashboard  : https://amikomeventhub-3320-main-se5rrk.free.laravel.cloud/admin
 * Halaman Admin Event      : https://amikomeventhub-3320-main-se5rrk.free.laravel.cloud/admin/events 
+
+UTS
+* UTS    : https://github.com/ratihintandwy/amikomeventhub_3320/tree/ujian-tengah-semester-24.12.3320
