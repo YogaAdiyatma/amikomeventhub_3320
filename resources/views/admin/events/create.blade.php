@@ -20,7 +20,7 @@
                 <label class="block text-sm font-bold text-slate-700 mb-2">Kategori</label>
                 <select name="category_id" class="w-full px-5 py-3 rounded-xl border border-slate-200 outline-none" required>
                     @foreach($categories as $category)
-                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @endforeach
                 </select>
             </div>

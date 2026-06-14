@@ -12,7 +12,7 @@
     <form action="{{ route('admin.events.update', $event->id) }}" method="POST" enctype="multipart/form-data" class="space-y-6">
         @csrf
         @method('PUT')
-
+       
         <div class="grid grid-cols-2 gap-6">
             <div class="col-span-2">
                 <label class="block text-sm font-bold text-slate-700 mb-2">Judul Event</label>
@@ -25,9 +25,9 @@
                 <label class="block text-sm font-bold text-slate-700 mb-2">Kategori</label>
                 <select name="category_id" class="w-full px-5 py-3 rounded-xl border border-slate-200 outline-none" required>
                     @foreach($categories as $category)
-                    <option value="{{ $category->id }}" {{ $event->category_id == $category->id ? 'selected' : '' }}>
-                        {{ $category->name }}
-                    </option>
+                        <option value="{{ $category->id }}" {{ $event->category_id == $category->id ? 'selected' : '' }}>
+                            {{ $category->name }}
+                        </option>
                     @endforeach
                 </select>
             </div>
