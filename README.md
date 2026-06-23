@@ -31,3 +31,6 @@ CRUD Tabel Event
 
 UTS
 * UTS    : [https://github.com/YogaAdiyatma/amikomeventhub_3320/tree/ujian-tengah-semester-24.12.3320](https://github.com/YogaAdiyatma/amikomeventhub_3320/tree/ujian-tengah-semester-24.12.3320)
+
+InfinityFree
+* Infinityfree : http://amikomeventhub-3320.free.je/?i=1
